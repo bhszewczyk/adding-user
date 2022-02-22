@@ -1,0 +1,25 @@
+.btn {
+	font: inherit;
+	display: inline-block;
+	background-color: cornflowerblue;
+	padding: 0.8rem 1.6rem;
+	text-decoration: none;
+	border: 1px solid rgb(0, 70, 161);
+	text-align: center;
+	cursor: pointer;
+	border-radius: 8px;
+	width: 200px;
+	margin: 2rem auto 0rem auto;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.66);
+}
+
+.btn:hover,
+.btn:active {
+	background-color: rgb(157, 198, 252);
+	border-color: cornflowerblue;
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.66);
+}
+
+.btn:active {
+	transform: translateY(4px);
+}

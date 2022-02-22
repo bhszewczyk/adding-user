@@ -5,7 +5,7 @@ import styles from './UsersList.module.css';
 
 function UsersList(props) {
 	return (
-		<Card className={styles.user}>
+		<Card className={styles.users}>
 			<ul>
 				{props.users.map((user) => {
 					return (

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import styles from './AddUser.module.css';
 
 import Card from '../UI/Card';
@@ -7,6 +7,9 @@ import ErrorModal from '../UI/ErrorModal';
 import Wrapper from '../Helpers/Wrapper';
 
 function AddUser(props) {
+	const nameInputRef = useRef();
+	const ageInputRef = useRef();
+
 	const [enteredUsername, setEnteredUsername] = useState('');
 	const [enteredAge, setEnteredAge] = useState('');
 	const [error, setError] = useState();
@@ -67,6 +70,7 @@ function AddUser(props) {
 						type='text'
 						onChange={usernameChangeHandler}
 						value={enteredUsername}
+						ref={nameInputRef}
 					></input>
 					<label htmlFor='userAge'>Age</label>
 					<input
@@ -74,6 +78,7 @@ function AddUser(props) {
 						type='number'
 						onChange={ageChangeHandler}
 						value={enteredAge}
+						ref={ageInputRef}
 					></input>
 					<Button type='submit'>Add User</Button>
 				</form>
